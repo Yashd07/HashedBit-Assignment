@@ -1,0 +1,85 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full viewport height */
+  margin: 0; /* Remove default margin */
+  background-color: #f0f0f0; /* Optional: background color for the body */
+}
+
+.todo-container {
+  max-width: 400px;
+  width: 90%; /* Make it responsive */
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  background-color: #f9f9f9;
+  text-align: center; /* Center text inside the container */
+}
+
+h1 {
+  font-size: 24px;
+}
+
+input {
+  width: calc(100% - 22px); /* Full width minus padding */
+  max-width: 100%; /* Prevent overflow */
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box; /* Include padding and border in width */
+}
+
+button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0; /* Remove default margin */
+}
+
+li {
+  display: flex; /* Use flexbox for alignment */
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  word-wrap: break-word; /* Wrap text within the task item */
+}
+
+li button {
+  background-color: #dc3545; /* Red for delete button */
+  padding: 5px 10px; /* Adjust button padding */
+}
+
+li button:hover {
+  background-color: #c82333; /* Darker red on hover */
+}
+
+@media (max-width: 600px) {
+  .todo-container {
+    width: 90%; /* Ensure it remains responsive */
+  }
+
+  input, button {
+    width: 100%; /* Full width on smaller screens */
+  }
+
+  li {
+    flex-direction: row; /* Ensure items remain in a row */
+  }
+}
